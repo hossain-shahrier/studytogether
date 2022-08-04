@@ -9,10 +9,16 @@ urlpatterns = [
     # Home
     path('', views.home, name="home"),
     path('room/<str:pk>', views.room, name="room"),
+
     # Create Room
     path('create-room/', views.createRoom, name='create-room'),
     # Update Room
     path('update-room/<str:pk>', views.updateRoom, name='update-room'),
     # Delete Room
-    path('delete-room/<str:pk>', views.deleteRoom, name='delete-room')
+    path('delete-room/<str:pk>', views.deleteRoom, name='delete-room'),
+
+    # Delete Message
+    path('delete-message/<str:pk>', views.deleteMessage, name='delete-message'),
+    # Edit Message
+    path('update-message/<str:pk>', views.updateMessage, name='update-message')
 ]
